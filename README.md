@@ -3,7 +3,7 @@
 > ✏️ 표시가 있는 곳은 직접 채워야 함. 5~7항은 본인이 실제로 겪은 일과 그 근거(화면, 커밋, 시나리오 단계)만 적을 것(꾸며 내면 시나리오 밖 점수 0점, 공고 6.3절 20번).
 
 ## 1. 배포 주소
-✏️ https://(배포 뒤 주소).streamlit.app
+https://team-forming-grre2zgjfmp9krrgegyjvk.streamlit.app/
 
 ## 2. PRD와 구현 계획의 위치
 - `docs/PRD.md`
