@@ -18,9 +18,9 @@ OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 MODEL_TIMEOUT_SEC = 120
 # 1차, 2차, 3차 모델(무료). 비밀 값 OPENROUTER_MODELS 에 쉼표로 적으면 그것을 씀
 DEFAULT_MODELS = [
-    "nvidia/nemotron-3-super-120b-a12b:free",
-    "openai/gpt-oss-120b:free",
     "google/gemma-4-31b-it:free",
+    "poolside/laguna-s-2.1:free",
+    "nvidia/nemotron-3-super-120b-a12b:free",
 ]
 
 

@@ -22,10 +22,11 @@ https://team-forming-grre2zgjfmp9krrgegyjvk.streamlit.app/
 | DB 일시정지 막기 | 어려운 해결 | GitHub Actions 예약 작업이 매일 09:17(한국 시각)에 DB에 질의(`.github/workflows/keepalive.yml`) |
 
 ## 4. 쓴 모델 3개
-✏️ 실제로 Secrets에 넣은 모델로 고칠 것(기본값은 아래).
-- 1차 `nvidia/nemotron-3-super-120b-a12b:free`
-- 2차 `openai/gpt-oss-120b:free`
-- 3차 `google/gemma-4-31b-it:free`
+- 1차 `google/gemma-4-31b-it:free`
+- 2차 `poolside/laguna-s-2.1:free`
+- 3차 `nvidia/nemotron-3-super-120b-a12b:free`
+
+처음에는 1차 `nvidia/nemotron-3-super-120b-a12b:free`, 2차 `openai/gpt-oss-120b:free`, 3차 `google/gemma-4-31b-it:free` 를 썼으나, 10/26 쉬움 시나리오에서 세 모델이 모두 실패해(404, 무료 중단, 429) 위 모델로 바꿈.
 
 ## 5. 오픈라우터 AI 모델 호출 실패 사례
 ✏️ 관리자 화면의 "AI 배정 진행 안내"와 "AI 호출 기록과 설정"을 캡처해 `img/` 에 넣고 적음.
