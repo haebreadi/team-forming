@@ -1,0 +1,15 @@
+# 비밀 값(키, DB 주소, 관리자 비밀번호)은 절대 올리지 않음
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# 파이썬
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+
+# 제출용 압축 파일
+*.zip

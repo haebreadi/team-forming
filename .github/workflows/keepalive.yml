@@ -1,0 +1,24 @@
+# Supabase 무료 프로젝트가 일시정지되지 않게 매일 DB에 질의함(공고 3장 "DB 일시정지"의 어려운 해결)
+# 저장소 Settings > Secrets and variables > Actions 에 DATABASE_URL 을 넣어야 동작함
+name: DB 일시정지 막기
+
+on:
+  schedule:
+    - cron: "17 0 * * *"   # 매일 00:17 UTC = 09:17 한국 시각
+  workflow_dispatch:        # Actions 화면에서 손으로도 실행할 수 있음
+
+jobs:
+  ping-db:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Supabase DB에 질의
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: |
+          if [ -z "$DATABASE_URL" ]; then
+            echo "DATABASE_URL 비밀 값 없음"
+            exit 1
+          fi
+          count=$(psql "$DATABASE_URL" -tAc "select count(*) from tf_settings")
+          echo "DB 질의 성공(tf_settings ${count}행)"
